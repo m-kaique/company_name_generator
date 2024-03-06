@@ -7,7 +7,7 @@ from langchain.schema.messages import HumanMessage, SystemMessage
 import os
 import json
 
-model_path="/Users/marcelokaique/documents/github/AIFriend/PythonFiles/models/llama2_7b_chat_uncensored.Q5_K_M.gguf"
+model_path=""
 n_gpu_layers = -1  # The number of layers to put on the GPU. The rest will be on the CPU. If you don't know how many layers there are, you can use -1 to move all to GPU.
 n_batch = 1000  # Should be between 1 and n_ctx, consider the amount of VRAM in your GPU.
 
