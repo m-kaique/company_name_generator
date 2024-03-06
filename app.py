@@ -1,11 +1,6 @@
-from langchain.callbacks.manager import CallbackManager
-from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
 from langchain.chains import LLMChain
 from langchain.prompts import PromptTemplate
 from langchain_community.llms import LlamaCpp
-from langchain.schema.messages import HumanMessage, SystemMessage
-import os
-import json
 
 model_path=""
 n_gpu_layers = -1  # The number of layers to put on the GPU. The rest will be on the CPU. If you don't know how many layers there are, you can use -1 to move all to GPU.
@@ -45,5 +40,4 @@ def extract_answer(data:str)->str:
 
 if __name__ == "__main__":
     llm_output = generate_company_name("House Construction")
-   #print(extract_answer(llm_output))
     print(llm_output)
